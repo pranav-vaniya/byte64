@@ -55,7 +55,7 @@ void print_newline()
         }
     }
 
-    clear_row(NUM_COLS - 1);
+    clear_row(NUM_ROWS - 1);
 }
 
 void putc(char chr)
@@ -63,10 +63,11 @@ void putc(char chr)
     if (chr == '\n')
     {
         print_newline();
+        move_cursor(row, col);
         return;
     }
 
-    if (col > NUM_COLS)
+    if (col >= NUM_COLS)
     {
         print_newline();
     }
@@ -77,6 +78,7 @@ void putc(char chr)
     };
 
     col++;
+    move_cursor(row, col);
 }
 
 void puts(char *str)
@@ -91,7 +93,6 @@ void puts(char *str)
         }
 
         putc(chr);
-        move_cursor(row, col);
     }
 }
 
