@@ -2,9 +2,9 @@
 
 set -e
 
-CC="x86_64-elf-gcc"
+CC="gcc"
 CFLAGS="-c -I kernel/include -ffreestanding"
-LD="x86_64-elf-ld"
+LD="ld"
 LDFLAGS="-n"
 ASM="nasm"
 ASMFLAGS="-f elf64"

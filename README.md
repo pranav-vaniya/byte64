@@ -9,9 +9,11 @@ Byte64 OS started as a passion project and remains a work in progress. It is des
 ## Compiling the Source
 
 To compile the source code, execute the `make` command in the parent directory:
+
 ```
 make
 ```
+
 This will generate an ISO file and start QEMU. You may need to update the compiler path and other settings in the scripts to suit your environment.
 
 ## Acknowledgements
